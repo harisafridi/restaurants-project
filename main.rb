@@ -12,8 +12,10 @@ require "nearby"
   #slim :task
 #end
 location ='ha8 6hl'
+
 get '/' do
  @tasks = UtilNearby.nearby_list location
+
  slim :index
  end
 
@@ -22,7 +24,8 @@ post '/' do
   redirect to('/')
 end
 
-get '/reviews' do
- @tasks = UtilCrawl.reviews location
- slim :index
+get '/:task' do
+ @tasks = UtilCrawl.reviews params[:task]
+ @name = params[:task]
+ slim :reviews
  end

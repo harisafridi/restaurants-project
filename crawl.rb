@@ -8,7 +8,7 @@ require "nearby"
 module UtilCrawl
 def self.reviews location
 	  array =[]
-		restaurant_name =CGI.escape(UtilNearby.nearby_list("#{location}").first)
+		restaurant_name =CGI.escape("#{location}")
 		link = "https://www.google.co.uk/search?num=5&q=tripadvisor%20#{restaurant_name}"
 		page = Nokogiri::HTML(open(link))
 		search_find = page.css('h3[class=r] a[href]')
