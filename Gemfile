@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+gem 'nokogiri'
+gem 'google_places'
+gem 'sinatra'
+gem 'geokit'
+gem 'slim'
