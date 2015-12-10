@@ -1,10 +1,16 @@
 form action="/" method="POST"
-  input type="text" name="task[name]"
+  input type="text" name="address[name]"
   input.button type="submit" value="Enter Address >>"
 
-h2 Restaurants found:
-ul.tasks
-  - @tasks.each do |task|
-    
-    li: a href="/#{task}" #{task}
-   
+
+table#items
+  tr
+    <thS>Name</th>		
+    <th>Rating</th>
+  - [@names, @vicinity, @rating].transpose.each do |n, v, r|    
+    tr
+        td: a href="/#{n}" #{n}
+    tr
+        td: span = "#{v}"
+        td = "#{r}"
+

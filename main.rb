@@ -6,26 +6,21 @@ $LOAD_PATH << '.'
 require "crawl"
 require "nearby"
 
-#get '/:task' do
 
- # @task = params[:task].split('-').join(' ').capitalize
-  #slim :task
-#end
 location ='ha8 6hl'
 
 get '/' do
- @tasks = UtilNearby.nearby_list location
-
+ @names, @vicinity, @rating  = UtilNearby.nearby_list location
  slim :index
  end
 
 post '/' do
-  location = params[:task]
+  location = params[:address]
   redirect to('/')
 end
 
 get '/:task' do
- @tasks = UtilCrawl.reviews params[:task]
- @name = params[:task]
+ @reviews = UtilCrawl.reviews params[:task]
+ @restaurantname = params[:task]
  slim :reviews
  end
