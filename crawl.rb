@@ -10,7 +10,9 @@ def self.reviews location
 	  array =[]
 		restaurant_name =CGI.escape("#{location}")
 		link = "https://www.google.co.uk/search?num=5&q=tripadvisor%20#{restaurant_name}"
-		page = Nokogiri::HTML(open(link))
+		page = Nokogiri::HTML(open(link, "User-Agent" => "Ruby/2.1.5",
+    "From" => "foo@bar.invalid",
+    "Referer" => "http://www.ruby-lang.org/"))
 		search_find = page.css('h3[class=r] a[href]')
 		get_search = search_find[0].to_s
 		trim = get_search.split("=")[2]
