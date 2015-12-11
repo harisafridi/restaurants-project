@@ -1,7 +1,7 @@
 
+require 'open-uri'
 require 'nokogiri' 
 require "cgi"  
-require 'open-uri'
 $LOAD_PATH << '.'
 require "nearby"
 
