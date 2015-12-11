@@ -5,12 +5,13 @@ form action="/" method="POST"
 
 table#items
   tr
-    <thS>Name</th>		
+
     <th>Rating</th>
   - [@names, @vicinity, @rating].transpose.each do |n, v, r|    
     tr
         td: a href="/#{n}" #{n}
     tr
-        td: span = "#{v}"
-        td = "#{r}"
+        td: hr = "#{v}"
+        td.rating = "#{r}"
+       
 

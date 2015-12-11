@@ -1,0 +1,104 @@
+body{
+	margin: auto;
+    width: 88%;
+}
+
+#banner{
+	background-color: #0A8F67;
+	padding: 2% 20% 4% 1%;
+	position: relative;
+}
+#banner h1, #banner p, #banner h3  {
+	background-color: #0A8F67;
+	 font-family: Roboto;
+	 color: white;
+	 display: inline;
+}
+#banner h1{
+	color: #9DFF4D;
+	word-spacing: 6px;
+	font-size: 300%; 
+}
+#banner h3{
+	word-spacing: 6px;
+	font-size: 150%; 
+	letter-spacing: 2px;
+	position: relative;
+}
+#banner p{
+	word-spacing: 6px;
+	font-size: 70%;
+	letter-spacing: 1px;
+
+	position: absolute;
+	left: 65%; 
+}
+#items {
+	 
+	 background: #FFEEEE; /* fallback for old browsers */
+     background: -webkit-linear-gradient(to left, #FFEEEE , #DDEFBB); /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(to left, #FFEEEE , #DDEFBB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+}
+.navigation a{
+	 font-family: arial;
+	 color: white;
+	 letter-spacing: 1px;
+	 text-decoration: none;
+}
+.navigation ul{
+     padding: 0;
+	 list-style-type: none; 
+}
+.navigation li{
+	 margin: 3%;
+	 display: inline;
+}
+.navigation a.active, .navigation a:hover { 
+	font-weight: bold;
+}
+.bio p{
+	font-family: arial;
+	background-color: white;
+	letter-spacing: 1px;
+    line-height: 1.8;
+    word-spacing: 3px;
+	color: black;
+	text-align: justify;
+}
+.bio img{
+	border-radius: 90%;
+	width: 200px;
+	margin-right: 1%;
+	float: left;
+}
+bio.subtitle{
+	position: relative;
+}
+.list  {
+	float: right;
+	list-style-type: none;
+	}
+fieldset {
+	clear: left;
+	}
+p.subtitle {
+	color: #315200;
+	margin: 0;
+	font-weight: bold;
+	font-size: 150%;
+	font-family: arial;
+}
+#footer { 
+	background-color: #0A8F67; 
+	font-family: arial;
+	color: white; 
+	width: auto;
+	margin-top: 20%;
+	margin-bottom: -5%;
+	font-size: 100%; 
+	text-align: left; 
+	clear: both;
+	line-height: 2em;
+}
+
